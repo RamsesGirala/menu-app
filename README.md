@@ -1,6 +1,6 @@
 # Menu Digital Backend
 
-Este proyecto es el backend para una aplicación que gestiona todos los datos para dar soporte a un menú digital.
+Este proyecto es el backend para una aplicación que gestiona todos los datos para dar soporte a un menú digital. Utiliza una base de datos en memoria H2.
 
 ## Requisitos
 
@@ -16,6 +16,10 @@ Este proyecto es el backend para una aplicación que gestiona todos los datos pa
 4. Ejecuta el comando `java -jar build/libs/menu-app-0.0.1-SNAPSHOT.jar` para iniciar el servidor.
 
 El servidor se ejecutará en el puerto 8080.
+
+## Diagrama de Clases
+
+En la dirección `/menu-app/Diagrama App en Carta.html` se encuentra una imagen del diagrama de clases del modelo de datos.
 
 ## Pruebas
 
