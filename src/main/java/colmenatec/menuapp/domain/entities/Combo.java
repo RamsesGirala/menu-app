@@ -16,7 +16,7 @@ public class Combo extends Base{
     private Integer descuento;
     private Integer precio;
     private String descripcion;
-    private String imagenId;
+    private String imagenUrl;
 
     @OneToMany
     private Set<ProductoCombo> productoCombos = new HashSet<>();

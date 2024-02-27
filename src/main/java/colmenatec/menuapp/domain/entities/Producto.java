@@ -12,6 +12,6 @@ public class Producto extends Base{
     private String nombre;
     private Integer precio;
     private String descripcion;
-    private String imagenId;
+    private String imagenUrl;
 
 }

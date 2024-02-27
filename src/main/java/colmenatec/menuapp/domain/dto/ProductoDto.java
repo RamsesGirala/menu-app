@@ -7,5 +7,5 @@ public class ProductoDto extends BaseDto{
     private String nombre;
     private Integer precio;
     private String descripcion;
-    private String imagenId;
+    private String imagenUrl;
 }

@@ -12,7 +12,7 @@ public class ComboDto extends BaseDto{
     private Integer descuento;
     private Integer precio;
     private String descripcion;
-    private String imagenId;
+    private String imagenUrl;
     private Set<ProductoComboDto> productoCombos = new HashSet<>();
 
 }

@@ -20,7 +20,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/empresas"
+				"url": "{{menu_app_host}}/empresas"
 			},
 			"response": []
 		},
@@ -75,12 +75,10 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/empresas/asignarSucursales/1?sucursalesIds=3",
-					"protocol": "http",
+					"raw": "{{menu_app_host}}/empresas/asignarSucursales/1?sucursalesIds=1",
 					"host": [
-						"localhost"
+						"{{menu_app_host}}"
 					],
-					"port": "8080",
 					"path": [
 						"empresas",
 						"asignarSucursales",
@@ -89,7 +87,7 @@
 					"query": [
 						{
 							"key": "sucursalesIds",
-							"value": "3"
+							"value": "1"
 						},
 						{
 							"key": "sucursalesIds",
@@ -115,7 +113,7 @@
 						}
 					}
 				},
-				"url": "http://localhost:8080/sucursales"
+				"url": "{{menu_app_host}}/sucursales"
 			},
 			"response": []
 		},
@@ -354,7 +352,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/categorias/asignarProductos/1?idsProductos=1",
+					"raw": "http://localhost:8080/categorias/asignarProductos/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -368,16 +366,17 @@
 					"query": [
 						{
 							"key": "idsProductos",
-							"value": "1"
-						},
-						{
-							"key": "idsProductos",
-							"value": "2",
+							"value": "1",
 							"disabled": true
 						},
 						{
 							"key": "idsProductos",
-							"value": "3",
+							"value": "8",
+							"disabled": true
+						},
+						{
+							"key": "idsProductos",
+							"value": "6",
 							"disabled": true
 						}
 					]
@@ -392,7 +391,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"levite pomelo\",\r\n    \"precio\":30,\r\n    \"descripcion\":\"una levite sabor a pomelo\",\r\n    \"imagenId\":\"26a49196-deea-4c3b-90b2-af3e821dd0c9\"\r\n}",
+					"raw": "{\r\n    \"nombre\":\"levite pomelodasd\",\r\n    \"precio\":30,\r\n    \"descripcion\":\"una levite sabor a pomelo\",\r\n    \"imagenUrl\":\"26a49196-deea-4c3b-90b2-af3e821dd0c9\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -449,13 +448,22 @@
 			"response": []
 		},
 		{
+			"name": "Filtrar Productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/productos/filtrar"
+			},
+			"response": []
+		},
+		{
 			"name": "Crear Combo",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"combos papitas\",\r\n    \"precio\":70,\r\n    \"descripcion\":\"papitas con unas cervecitas\",\r\n    \"imagenId\":\"\",\r\n    \"productoCombos\":[\r\n        {\r\n            \"cantidad\":2,\r\n            \"productoId\":3\r\n        },\r\n        {\r\n            \"cantidad\":1,\r\n            \"productoId\":2\r\n        }\r\n    ]\r\n}",
+					"raw": "{\r\n    \"nombre\":\"combos papitas\",\r\n    \"precio\":70,\r\n    \"descripcion\":\"papitas con unas cervecitas\",\r\n    \"imagenUrl\":\"\",\r\n    \"productoCombos\":[\r\n        {\r\n            \"cantidad\":2,\r\n            \"productoId\":3\r\n        },\r\n        {\r\n            \"cantidad\":1,\r\n            \"productoId\":2\r\n        }\r\n    ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
