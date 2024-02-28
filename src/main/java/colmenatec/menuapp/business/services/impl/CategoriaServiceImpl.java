@@ -26,4 +26,12 @@ public class CategoriaServiceImpl extends BaseServiceImpl<Categoria,Long> implem
         return update(categoria);
     }
 
+    @Override
+    public Categoria asignarSubcategorias(Long id, List<Categoria> subcategorias) {
+        var categoria = getById(id);
+        subcategorias.forEach(subcategoria ->{
+            categoria.getSubcategorias().add(subcategoria);
+        });
+        return update(categoria);
+    }
 }

@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface ICategoriaService extends IBaseService<Categoria,Long>{
     Categoria asignarProductos(Long id, List<Long> idsProductos);
+    Categoria asignarSubcategorias(Long id,List<Categoria> subcategorias);
 }

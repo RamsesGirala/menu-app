@@ -11,10 +11,13 @@ import java.util.Set;
 public class Categoria extends Base{
 
     private String nombre;
-
+    private Long categoriaPadreId;
     @OneToMany
     private Set<Producto> productos = new HashSet<>();
 
     @OneToMany
     private Set<Combo> combos = new HashSet<>();
+
+    @OneToMany
+    private Set<Categoria> subcategorias = new HashSet<>();
 }

@@ -12,4 +12,5 @@ public class SucursalDto extends BaseDto{
     private String nombre;
     private DireccionDto direccion;
     private Set<CategoriaDto> categorias = new HashSet<>();
+    private Long empresaId;
 }

@@ -12,15 +12,18 @@
 #### SUCURSALES ####
 
 {
-    "nombre":"lo de brown de la rotonda"
+    "nombre":"lo de brown de la rotonda",
+    "empresaId":1
 }
 
 {
-    "nombre":"lo de brown del centro"
+    "nombre":"lo de brown del centro",
+    "empresaId":2
 }
 
 {
-    "nombre":"empanaditas en godoy cruz"
+    "nombre":"empanaditas en godoy cruz",
+    "empresaId":null
 }
 
 
@@ -44,15 +47,28 @@
 #### CATEGORIAS ####
 
 {
-    "nombre":"bebidas"
+    "nombre":"bebidas",,
+    "categoriaPadreId":null
 }
 
 {
-    "nombre":"pizzas"
+    "nombre":"tragos",,
+    "categoriaPadreId":1
 }
 
 {
-    "nombre":"hamburguesas"
+    "nombre":"gaseosas",,
+    "categoriaPadreId":1
+}
+
+{
+    "nombre":"pizzas",
+     "categoriaPadreId":null
+}
+
+{
+    "nombre":"hamburguesas",
+    "categoriaPadreId":null
 }
 
 #### PRODUCTOS ####

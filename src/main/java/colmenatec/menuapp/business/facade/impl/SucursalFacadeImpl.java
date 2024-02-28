@@ -5,6 +5,7 @@ import colmenatec.menuapp.business.mapper.IBaseMapper;
 import colmenatec.menuapp.business.mapper.ISucursalMapper;
 import colmenatec.menuapp.business.services.IBaseService;
 import colmenatec.menuapp.business.services.ISucursalService;
+import colmenatec.menuapp.domain.dto.SucursalCategoriaDto;
 import colmenatec.menuapp.domain.dto.SucursalDto;
 import colmenatec.menuapp.domain.entities.Sucursal;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,4 +35,15 @@ public class SucursalFacadeImpl extends BaseFacadeImpl<Sucursal, SucursalDto,Lon
         return sucursalMapper.toDTO(sucursalService.asignarCategorias(id,idsCategorias));
     }
 
+    @Override
+    public SucursalCategoriaDto obtenerCategorias(Long id) {
+        SucursalCategoriaDto sucursalCategoriaDto = new SucursalCategoriaDto();
+        var sucursal = sucursalService.getById(id);
+        sucursalCategoriaDto.setId(sucursal.getId());
+        sucursalCategoriaDto.setNombre(sucursal.getNombre());
+        sucursal.getCategorias().forEach(categoria -> {
+            sucursalCategoriaDto.getCategorias().add(categoria.getNombre());
+        });
+        return sucursalCategoriaDto;
+    }
 }

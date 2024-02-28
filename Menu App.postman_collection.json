@@ -29,7 +29,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/empresas"
+				"url": "{{menu_app_host}}/empresas"
 			},
 			"response": []
 		},
@@ -38,7 +38,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:8080/empresas/1"
+				"url": "{{menu_app_host}}/empresas/1"
 			},
 			"response": []
 		},
@@ -106,7 +106,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"empanaditas en el centroaasds\"\r\n}",
+					"raw": "{\r\n    \"nombre\":\"empanaditas en el centro\",\r\n    \"empresaId\":null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -195,7 +195,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/sucursales/asignarCategorias/1?idsCategorias=1&idsCategorias=4",
+					"raw": "http://localhost:8080/sucursales/asignarCategorias/1?idsCategorias=1&idsCategorias=2&idsCategorias=3&idsCategorias=4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -213,10 +213,27 @@
 						},
 						{
 							"key": "idsCategorias",
+							"value": "2"
+						},
+						{
+							"key": "idsCategorias",
+							"value": "3"
+						},
+						{
+							"key": "idsCategorias",
 							"value": "4"
 						}
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Categorias de una Sucursal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/sucursales/obtenerCategorias/1"
 			},
 			"response": []
 		},
@@ -290,7 +307,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"bebidas\"\r\n}",
+					"raw": "{\r\n    \"nombre\":\"gaseosas\",\r\n    \"categoriaPadreId\":null\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -352,7 +369,7 @@
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/categorias/asignarProductos/1",
+					"raw": "http://localhost:8080/categorias/asignarProductos/2?idsProductos=2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -361,13 +378,12 @@
 					"path": [
 						"categorias",
 						"asignarProductos",
-						"1"
+						"2"
 					],
 					"query": [
 						{
 							"key": "idsProductos",
-							"value": "1",
-							"disabled": true
+							"value": "2"
 						},
 						{
 							"key": "idsProductos",
@@ -391,7 +407,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nombre\":\"levite pomelodasd\",\r\n    \"precio\":30,\r\n    \"descripcion\":\"una levite sabor a pomelo\",\r\n    \"imagenUrl\":\"26a49196-deea-4c3b-90b2-af3e821dd0c9\"\r\n}",
+					"raw": "{\r\n    \"nombre\":\"levite pomelo\",\r\n    \"precio\":30,\r\n    \"descripcion\":\"una levite sabor a pomelo\",\r\n    \"imagenUrl\":\"26a49196-deea-4c3b-90b2-af3e821dd0c9\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

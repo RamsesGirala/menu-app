@@ -27,4 +27,8 @@ public class CategoriaFacadeImpl extends BaseFacadeImpl<Categoria, CategoriaDto,
         return categoriaMapper.toDTO(categoriaService.asignarProductos(id,idsProductos));
     }
 
+    @Override
+    public CategoriaDto asignarSubcategorias(Long id, List<CategoriaDto> subcategorias) {
+        return categoriaMapper.toDTO(categoriaService.asignarSubcategorias(id, categoriaMapper.toEntitiesList(subcategorias)));
+    }
 }

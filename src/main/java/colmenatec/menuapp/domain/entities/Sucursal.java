@@ -12,9 +12,9 @@ public class Sucursal extends Base{
 
     private String nombre;
 
+    private String empresaId;
     @OneToOne
     private Direccion direccion;
-
     @OneToMany
     private Set<Categoria> categorias = new HashSet<>();
 }
